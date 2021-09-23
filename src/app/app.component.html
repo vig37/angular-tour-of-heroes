@@ -1,12 +1,15 @@
-<mat-toolbar color="primary">{{ title }}</mat-toolbar>
+<mat-toolbar color="primary">
+  <a routerLink="/dashboard" class="headerText"> {{ title }} </a>
+</mat-toolbar>
 
-<nav mat-tab-nav-bar>
+<nav mat-tab-nav-bar color="accent">
   <a mat-tab-link routerLink="/dashboard" routerLinkActive #rlaDash="routerLinkActive" [active]="rlaDash.isActive">Dashboard</a>
-  <a mat-tab-link routerLink="/heroes" routerLinkActive #rlaHeroes="routerLinkActive" [active]="rlaHeroes.isActive">Heroes</a>
+  <a mat-tab-link routerLink="/heroes" routerLinkActive #rlaHeroes="routerLinkActive" [active]="rlaHeroes.isActive">Heroes List</a>
+  <a mat-tab-link routerLink="/createTeam" routerLinkActive #rlaTeams="routerLinkActive" [active]="rlaTeams.isActive">Create a Team</a>
 </nav>
 
 <div>
   <router-outlet></router-outlet>
 </div>
 
-<app-messages></app-messages>
+<!-- <app-messages></app-messages> -->
