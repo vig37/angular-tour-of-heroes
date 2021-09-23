@@ -8,16 +8,16 @@ import { Hero } from './hero';
 export class InMemoryDataService implements InMemoryDbService {
   createDb() {
     const heroes = [
-      { id: 1, name: 'Mario', description: 'wahoo' },
-      { id: 2, name: 'Luigi', description: 'luigi time'},
-      { id: 3, name: 'Yoshi', description: 'yoshi' },
-      { id: 4, name: 'Toad', description: 'create a short description' },
-      { id: 5, name: 'Toadette', description: 'create a short description' },
-      { id: 6, name: 'Princess Peach', description: 'create a short description' },
-      { id: 7, name: 'Kirby', description: 'create a short description' },
-      { id: 8, name: 'Princess Daisy', description: 'create a short description' },
-      { id: 9, name: 'Bowser', description: 'create a short description' },
-      { id: 10, name: 'Donkey Kong', description: 'create a short description' }
+      { id: 1, name: 'Mario', description: 'wahoo', imagePath: 'assets/hero-images/SMP_Icon_Mario.png'},
+      { id: 2, name: 'Luigi', description: 'luigi time', imagePath: 'assets/hero-images/SMP_Icon_Luigi.png'},
+      { id: 3, name: 'Yoshi', description: 'yoshi', imagePath: 'assets/hero-images/SMP_Icon_Yoshi.png' },
+      { id: 4, name: 'Monty Mole', description: 'create a short description', imagePath: 'assets/hero-images/SMP_Icon_Monty_Mole.png' },
+      { id: 5, name: 'Peach', description: 'create a short description', imagePath: 'assets/hero-images/SMP_Icon_Peach.png' },
+      { id: 6, name: 'Daisy', description: 'create a short description', imagePath: 'assets/hero-images/SMP_Icon_Daisy.png' },
+      { id: 7, name: 'Diddy', description: 'create a short description', imagePath: 'assets/hero-images/SMP_Icon_Diddy.png' },
+      { id: 8, name: 'Donkey Kong', description: 'create a short description', imagePath: 'assets/hero-images/SMP_Icon_DK.png' },
+      { id: 9, name: 'Bowser', description: 'create a short description', imagePath: 'assets/hero-images/SMP_Icon_Bowser.png' },
+      { id: 10, name: 'Shy Guy', description: 'create a short description', imagePath: 'assets/hero-images/SMP_Icon_Shy_Guy.png' }
     ];
     return {heroes};
   }
