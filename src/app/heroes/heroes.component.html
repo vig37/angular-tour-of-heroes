@@ -1,21 +1,30 @@
 <h2>My Heroes</h2>
 
 <div>
-  <label for="new-hero">Hero name: </label>
-  <input id="new-hero" #heroName />
+  <label for="new-hero" style="font-size: large;"> Hero name: </label>
+  <input id="new-hero" #heroName style="padding: .5rem;"/>
 
   <!-- (click) passes input value to add() and then clears the input -->
-  <button class="add-button" (click)="add(heroName.value); heroName.value=''">
+  <button mat-raised-button (click)="add(heroName.value); heroName.value=''" style="margin-left:10px;">
     Add hero
   </button>
 </div>
 
-<ul class="heroes">
-  <li *ngFor="let hero of heroes">
-    <a routerLink="/detail/{{hero.id}}">
-      <span class="badge">{{hero.id}}</span> {{hero.name}}
-    </a>
-    <button class="delete" title="delete hero"
-      (click)="delete(hero)">x</button>
-  </li>
-</ul>
+<div class="content">
+  <mat-card class="card" *ngFor="let hero of heroes">
+    <mat-card-header>
+      <mat-card-title>{{ hero.name }}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image src="{{ hero.imagePath }}">
+    <mat-card-content>
+      <p> {{ hero.quote }}</p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button routerLink="/detail/{{hero.id}}">More Details</button>
+      <button mat-raised-button (click)="delete(hero)">Delete</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+
+
+

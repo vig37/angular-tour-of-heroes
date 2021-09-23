@@ -1,0 +1,58 @@
+<h2>Create a Team</h2>
+
+<!-- <div class="heros-list">
+  <h2>Heroes List</h2>
+  <div
+    cdkDropList
+    #todoList="cdkDropList"
+    [cdkDropListData]="listOfHeroes"
+    [cdkDropListConnectedTo]="[heroTeam]"
+    class="example-list"
+    (cdkDropListDropped)="drop($event)">
+    <div class="example-box" *ngFor="let hero of heroes" cdkDrag>{{hero.id}}</div>
+  </div>
+</div>
+
+<div class="example-container">
+    <h2>Team</h2>
+  
+    <div
+      cdkDropList
+      #heroTeam="cdkDropList"
+      [cdkDropListData]="team"
+      [cdkDropListConnectedTo]="[listOfHeroes]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let hero of heroes" cdkDrag>{{hero.id}}</div>
+    </div>
+  </div> -->
+
+  <div class="example-container">
+    <h2>List of Heroes</h2>
+  
+    <div
+      cdkDropList
+      #listOfHeroes="cdkDropList"
+      [cdkDropListData]="heroes"
+      [cdkDropListConnectedTo]="[chosenHeroes]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let hero of heroes" cdkDrag>{{hero.name}}</div>
+    </div>
+  </div>
+  
+  <div class="example-container">
+    <h2>Selected Heroes</h2>
+  
+    <div
+      cdkDropList
+      #chosenHeroes="cdkDropList"
+      [cdkDropListData]="selectedHeroes"
+      [cdkDropListConnectedTo]="[listOfHeroes]"
+      class="example-list"
+      (cdkDropListDropped)="drop($event)">
+      <div class="example-box" *ngFor="let hero of selectedHeroes" cdkDrag>{{hero.name}}</div>
+    </div>
+
+  </div>
+  

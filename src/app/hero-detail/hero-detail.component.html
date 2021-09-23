@@ -1,14 +1,23 @@
 <div *ngIf="hero">
 
-    <h2>{{hero.name | uppercase}} Details</h2>
-    <div><span>id: </span>{{hero.id}}</div>
+    <h2>Modify {{ hero.name }}'s Details</h2>
+    <img mat-card-image class="imgFix" src="{{ hero.imagePath }}" >
     <div>
-      <label for="hero-name">Hero name: </label>
+      <span>id: </span>
+      {{hero.id}}
+    </div>
+    <div>
+      <label for="hero-name">Hero Name: </label>
       <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
     </div>
 
-    <button (click)="save()">save</button>
+    <div>
+      <label for="hero-quote">Hero Quote: </label>
+      <input id="hero-quote" [(ngModel)]="hero.quote" placeholder="quote">
+    </div>
 
-    <button (click)="goBack()">go back</button>
+    <button mat-raised-button (click)="save()">save</button>
+
+    <button mat-raised-button (click)="goBack()" >go back</button>
   
 </div>
