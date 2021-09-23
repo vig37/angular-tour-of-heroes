@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { Hero } from '../hero';
 import { HeroService } from '../hero.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-heroes',
@@ -11,7 +12,12 @@ import { HeroService } from '../hero.service';
 export class HeroesComponent implements OnInit {
   heroes: Hero[] = [];
 
-  constructor(private heroService: HeroService) { }
+  constructor(
+    private heroService: HeroService,
+    private _snackBar: MatSnackBar
+    ) { 
+
+    }
 
   ngOnInit() {
     this.getHeroes();
@@ -29,6 +35,7 @@ export class HeroesComponent implements OnInit {
       .subscribe(hero => {
         this.heroes.push(hero);
       });
+      this._snackBar.open(name + ' has been added successfully!', 'Okay');
   }
 
   delete(hero: Hero): void {
