@@ -23,6 +23,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { CreateTopHeroesComponent } from './create-top-heroes/create-top-heroes.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    HeroTeamComponent
+    HeroTeamComponent,
+    CreateTopHeroesComponent,
   ],
   imports: [
     HttpClientModule,
@@ -50,7 +52,8 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
     MatCardModule,
     MatButtonModule,
     MatInputModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
