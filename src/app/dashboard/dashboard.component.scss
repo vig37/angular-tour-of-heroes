@@ -5,7 +5,7 @@ h2 {
 .heroes-menu {
 	padding: 0;
 	margin: auto;
-	max-width: 1000px;
+	max-width: 2000px;
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -13,24 +13,30 @@ h2 {
 	align-content: flex-start;
 	align-items: flex-start;
 }
+.resizeImg {
+	margin-top: 10px;
+	max-width: 150px;
+	max-height: 150px;
+}
 a {
-	background-color: #3f525c;
+	background-color: #C2185B;
 	border-radius: 2px;
 	padding: 1rem;
 	font-size: 1.2rem;
 	text-decoration: none;
 	display: inline-block;
 	color: #fff;
+	font-style: bold;
 	text-align: center;
 	width: 100%;
 	min-width: 70px;
-	margin: .5rem auto;
+	margin: .25rem auto;
 	box-sizing: border-box;
 	order: 0;
 	flex: 0 1 auto;
 	align-self: auto;
 	&:hover {
-		background-color: #000;
+		background-color: #AD1457;
 	}
 }
 @media (min-width: 600px) {
