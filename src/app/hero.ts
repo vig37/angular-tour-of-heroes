@@ -3,4 +3,5 @@ export interface Hero {
     name: string;
     quote: string;
     imagePath: string;
+    altText: string;
 }

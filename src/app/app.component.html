@@ -1,6 +1,10 @@
-<mat-toolbar color="primary">
-  <a routerLink="/dashboard" class="headerText"> {{ title }} </a>
-</mat-toolbar>
+<header>
+  <mat-toolbar>
+    <a routerLink="/dashboard" class="headerText">
+      <h1>{{ title }}</h1> 
+    </a>
+  </mat-toolbar>
+</header>
 
 <nav mat-tab-nav-bar color="accent">
   <a mat-tab-link routerLink="/dashboard" routerLinkActive #rlaDash="routerLinkActive" [active]="rlaDash.isActive">Dashboard</a>
@@ -8,8 +12,8 @@
   <a mat-tab-link routerLink="/createTopHeroes" routerLinkActive #rlaTop="routerLinkActive" [active]="rlaTop.isActive">Create Top Heroes</a>
 </nav>
 
-<div>
+<main>
   <router-outlet></router-outlet>
-</div>
+</main>
 
 <!-- <app-messages></app-messages> -->
