@@ -13,7 +13,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeroSearchComponent } from './hero-search/hero-search.component';
-import { HeroTeamComponent } from './hero-team/hero-team.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTabsModule } from '@angular/material/tabs';
@@ -33,8 +32,7 @@ import { CreateTopHeroesComponent } from './create-top-heroes/create-top-heroes.
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    HeroTeamComponent,
-    CreateTopHeroesComponent,
+    CreateTopHeroesComponent
   ],
   imports: [
     HttpClientModule,

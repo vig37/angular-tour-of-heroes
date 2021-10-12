@@ -34,5 +34,6 @@ export class CreateTopHeroesComponent implements OnInit {
                         event.currentIndex);
     }
   }
+  
 
 }

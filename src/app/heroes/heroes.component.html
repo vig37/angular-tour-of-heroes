@@ -4,12 +4,12 @@
 
 
 <div>
-  <label for="new-hero" style="font-size: large;"> Hero name: </label>
+  <label for="new-hero" style="font-size: large;"> Create Hero: </label>
   <input id="new-hero" #heroName style="padding: .5rem;"/>
     
       <!-- (click) passes input value to add() and then clears the input -->
   <button mat-raised-button (click)="add(heroName.value); heroName.value=''" style="margin-left:10px;">
-    Add hero
+    Add character
   </button>
 </div>
     

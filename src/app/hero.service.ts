@@ -11,7 +11,12 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class HeroService {
 
-  private heroesUrl = 'api/heroes';  // URL to web api
+  // const baseUrl = 'http://localhost:8080//hero/v1';
+
+  // private heroesUrl = 'http://localhost:8080/api/heroes';  // URL to web api
+
+  // private heroesUrl = 'http://localhost:8080';
+  private heroesUrl = 'api/heroes';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })

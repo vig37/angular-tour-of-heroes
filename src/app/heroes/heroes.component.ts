@@ -12,6 +12,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[] = [];
+  defaultImagePath: string = 'assets/hero-images/default.png';
 
   constructor(
     private heroService: HeroService,
@@ -32,11 +33,15 @@ export class HeroesComponent implements OnInit {
   add(name: string): void {
     name = name.trim();
     if (!name) { return; }
+
     this.heroService.addHero({ name } as Hero)
       .subscribe(hero => {
         this.heroes.push(hero);
-      });
-      this._snackBar.open(name + ' has been added successfully!', 'Okay');
+        hero.imagePath = this.defaultImagePath;
+      }
+    );
+    
+    this._snackBar.open(name + ' has been added successfully!', 'Okay');
   }
 
   delete(hero: Hero): void {
