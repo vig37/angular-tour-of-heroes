@@ -36,9 +36,9 @@ import { CreateTopHeroesComponent } from './create-top-heroes/create-top-heroes.
   ],
   imports: [
     HttpClientModule,
-    HttpClientInMemoryWebApiModule.forRoot(
-      InMemoryDataService, { dataEncapsulation: false }
-    ),
+    // HttpClientInMemoryWebApiModule.forRoot(
+    //   InMemoryDataService, { dataEncapsulation: false }
+    // ),
     BrowserModule,
     FormsModule,
     AppRoutingModule,

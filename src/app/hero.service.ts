@@ -11,12 +11,10 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 })
 export class HeroService {
 
-  // const baseUrl = 'http://localhost:8080//hero/v1';
-
   // private heroesUrl = 'http://localhost:8080/api/heroes';  // URL to web api
 
-  // private heroesUrl = 'http://localhost:8080';
-  private heroesUrl = 'api/heroes';
+  private heroesUrl = 'http://localhost:8080/hero/v1/';
+  // private heroesUrl = 'api/heroes';
 
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
@@ -63,7 +61,7 @@ export class HeroService {
   }
 
   updateHero(hero: Hero): Observable<any> {
-    return this.http.put(this.heroesUrl, hero, this.httpOptions).pipe(
+    return this.http.put(this.heroesUrl + "/" + hero.id, hero, this.httpOptions).pipe(
       tap(_ => this.log(`updated hero id=${hero.id}`)),
       catchError(this.handleError<any>('updateHero'))
     );
