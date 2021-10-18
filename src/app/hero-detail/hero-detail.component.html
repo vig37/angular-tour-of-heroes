@@ -6,18 +6,23 @@
       <span>id: </span>
       {{hero.id}}
     </div>
-    <div>
+    <form [formGroup]="formGroup">
       <label for="hero-name">Hero Name: </label>
-      <input id="hero-name" [(ngModel)]="hero.name" placeholder="name">
-    </div>
-
-    <div>
+      <input type="text" [(ngModel)]="hero.name" formControlName="name" id="new-hero"/>
+      <br>
       <label for="hero-quote">Hero Quote: </label>
-      <input id="hero-quote" [(ngModel)]="hero.quote" placeholder="quote">
-    </div>
-
-    <button mat-raised-button (click)="save()">save</button>
-
-    <button mat-raised-button (click)="goBack()" >go back</button>
+      <input type="text" [(ngModel)]="hero.quote" formControlName="quote" id="new-hero" />
+      <br>
+      <label for="hero-imagePath">Hero Local Image Path: </label>
+      <input type="text" [(ngModel)]="hero.imagePath" formControlName="imagePath" id="new-hero"/>
+      <br>
+      <label for="hero-altText">Hero Image Description: </label>
+      <input type="text" [(ngModel)]="hero.altText" formControlName="altText" id="new-hero"/>
+      <br>
+      <!-- (click) passes input value to add() and then clears the input -->
+      <br>
+      <button mat-raised-button (click)="save()">save</button>
+      <button mat-raised-button (click)="goBack()" >go back</button>
+  </form>
   
 </div>

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule } from '@angular/forms'; // where NgModel lives
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // where NgModel lives
 import { HttpClientModule } from '@angular/common/http';
 import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -23,6 +23,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { CreateTopHeroesComponent } from './create-top-heroes/create-top-heroes.component';
+import { AddHeroComponent } from './add-hero/add-hero.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { CreateTopHeroesComponent } from './create-top-heroes/create-top-heroes.
     MessagesComponent,
     DashboardComponent,
     HeroSearchComponent,
-    CreateTopHeroesComponent
+    CreateTopHeroesComponent,
+    AddHeroComponent
   ],
   imports: [
     HttpClientModule,
@@ -41,6 +43,7 @@ import { CreateTopHeroesComponent } from './create-top-heroes/create-top-heroes.
     // ),
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,

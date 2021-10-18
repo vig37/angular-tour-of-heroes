@@ -1,0 +1,20 @@
+<h2>Add a new hero</h2>
+<img mat-card-image class="imgFix" >
+<form [formGroup]="formGroup">
+    <label for="hero-name">Hero Name: </label>
+    <input type="text" formControlName="name" id="new-hero"/>
+    <br>
+    <label for="hero-quote">Hero Quote: </label>
+    <input type="text" formControlName="quote" id="new-hero" />
+    <br>
+    <label for="hero-imagePath">Hero Local Image Path: </label>
+    <input type="text" formControlName="imagePath" id="new-hero"/>
+    <br>
+    <label for="hero-altText">Hero Image Description: </label>
+    <input type="text" formControlName="altText" id="new-hero"/>
+    <br>
+    <!-- (click) passes input value to add() and then clears the input -->
+    <br>
+    <button mat-raised-button (click)="add()">add</button>
+    <button mat-raised-button (click)="goBack()" >go back</button>
+</form>

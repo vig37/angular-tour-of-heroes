@@ -2,6 +2,10 @@
   <mat-toolbar>
     <a routerLink="/dashboard" class="headerText">
       <h1>{{ title }}</h1> 
+      <!-- <button mat-raised-button (click)="goBack()" >go back</button> -->
+    </a>
+    <a class="headerButton">
+      <button mat-raised-button> Log In</button>
     </a>
   </mat-toolbar>
 </header>
@@ -10,6 +14,7 @@
   <a mat-tab-link routerLink="/dashboard" routerLinkActive #rlaDash="routerLinkActive" [active]="rlaDash.isActive">Dashboard</a>
   <a mat-tab-link routerLink="/heroes" routerLinkActive #rlaHeroes="routerLinkActive" [active]="rlaHeroes.isActive">Hero List</a>
   <a mat-tab-link routerLink="/createTopHeroes" routerLinkActive #rlaTop="routerLinkActive" [active]="rlaTop.isActive">Create Top Heroes List</a>
+  <a mat-tab-link routerLink="/addAHero" routerLinkActive #rlaAdd="routerLinkActive" [active]="rlaAdd.isActive">Add A Hero</a>
 </nav>
 
 <main>
